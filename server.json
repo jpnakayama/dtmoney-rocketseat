@@ -1,0 +1,68 @@
+{
+  "transactions": [
+    {
+      "id": 1,
+      "description": "Desenvolvimento de site",
+      "type": "income",
+      "category": "Venda",
+      "price": 12000,
+      "createdAt": "2023-02-10T13:26:45.546Z"
+    },
+    {
+      "id": 2,
+      "description": "Pizza",
+      "type": "outcome",
+      "category": "Alimentação",
+      "price": 75,
+      "createdAt": "2023-02-10T21:26:45.546Z"
+    },
+    {
+      "id": 3,
+      "description": "Freela",
+      "type": "income",
+      "category": "Venda",
+      "price": 700,
+      "createdAt": "2023-02-12T21:26:45.546Z"
+    },
+    {
+      "description": "Méqui",
+      "category": "Alimentação",
+      "price": 75,
+      "type": "outcome",
+      "id": 4,
+      "createdAt": "2023-02-13T13:26:45.546Z"
+    },
+    {
+      "description": "Mercado",
+      "category": "Alimentação",
+      "price": 150,
+      "type": "outcome",
+      "createdAt": "2023-02-13T18:47:40.586Z",
+      "id": 5
+    },
+    {
+      "description": "Aluguel",
+      "category": "Habitação",
+      "price": 1500,
+      "type": "outcome",
+      "createdAt": "2023-02-13T19:05:52.187Z",
+      "id": 6
+    },
+    {
+      "description": "Mercado",
+      "category": "Alimentação",
+      "price": 125,
+      "type": "outcome",
+      "createdAt": "2023-02-16T13:41:25.735Z",
+      "id": 8
+    },
+    {
+      "description": "Freela",
+      "category": "Venda",
+      "price": 1200,
+      "type": "income",
+      "createdAt": "2023-02-16T19:39:35.849Z",
+      "id": 9
+    }
+  ]
+}

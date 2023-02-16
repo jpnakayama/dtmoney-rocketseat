@@ -1,0 +1,54 @@
+import { useContext } from 'react'
+import { Header } from '../../components/Header'
+import { SearchForm } from '../../components/SearchForm'
+import { Summary } from '../../components/Summary'
+import { TransactionsContext } from '../../contexts/TransactionsContext'
+import { dateFormatter, priceFormatter } from '../../utils/formatter'
+import { Trash } from 'phosphor-react'
+import {
+  ActionIcons,
+  PriceHighlight,
+  TransactionsContainer,
+  TransactionsTable,
+} from './styles'
+
+export function Transactions() {
+  const { transactions, deleteTransaction } = useContext(TransactionsContext)
+
+  return (
+    <div>
+      <Header />
+      <Summary />
+
+      <TransactionsContainer>
+        <SearchForm />
+        <TransactionsTable>
+          <tbody>
+            {transactions.map((transaction) => {
+              return (
+                <tr key={transaction.id}>
+                  <td width="40%">{transaction.description}</td>
+                  <td>
+                    <PriceHighlight variant={transaction.type}>
+                      {transaction.type === 'outcome' && '- '}
+                      {priceFormatter.format(transaction.price)}
+                    </PriceHighlight>
+                  </td>
+                  <td>{transaction.category}</td>
+                  <td>
+                    {dateFormatter.format(new Date(transaction.createdAt))}
+                  </td>
+                  <ActionIcons>
+                    <button onClick={() => deleteTransaction(transaction.id)}>
+                      <Trash size={20} weight="regular" />
+                    </button>
+                  </ActionIcons>
+                </tr>
+              )
+            })}
+          </tbody>
+        </TransactionsTable>
+      </TransactionsContainer>
+    </div>
+  )
+}
